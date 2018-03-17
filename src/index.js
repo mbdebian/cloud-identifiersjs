@@ -72,7 +72,7 @@ var IdentifiersJS = (function () {
         }
         endpoint = endpoint + "/" + compactId;
         // Prepare response
-        var response = Object.create(ServerResponseResolve);
+        var response = new ServerResponseResolve();
 
 
     };
