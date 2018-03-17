@@ -52,6 +52,23 @@ var IdentifiersJS = (function () {
         this.host = host;
         this.port = port;
     }
+
+    ResolverService.prototype.resolve = function (compactId, selector) {
+        // TODO
+    };
     // [___ (Resolver) Compact ID Resolution Services ___]
+
+    // --- API Services Factory ---
+    function factoryGetResolver(host, port) {
+        var dstHost = wsResolverHost;
+        var dstPort = wsResolverPort;
+        if (typeof host !=== undefined) {
+            dstHost = host;
+            if (typeof port !=== undefined) {
+                dstPort = port;
+            }
+        }
+        return new ResolverService(host, port);
+    }
 
 })();
