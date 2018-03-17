@@ -23,3 +23,7 @@ sync_project_version:
 set_next_development_version:
 	@echo "<===|DEVOPS|===> [SYNC] Setting the new development version, current ${tag_version}"
 	@# TODO
+
+deploy: clean distribution
+	@echo "<===|DEVOPS|===> [DEPLOY] Deploying library, version ${tag_version}"
+	@# TODO
