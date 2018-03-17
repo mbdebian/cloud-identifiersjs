@@ -35,4 +35,13 @@ var IdentifiersJS = (function () {
         recommendationExplanation: ""
     };
 
+    var ResolvedResource = {
+        accessUrl: "",
+        info: "",
+        institution: "",
+        location: "",
+        official: false,
+        recommendation: Object.create(Recommendation)
+    };
+
 })();
