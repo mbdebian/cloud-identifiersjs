@@ -98,14 +98,15 @@ var IdentifiersJS = (function () {
             endpoint = endpoint + "/" + selector;
         }
         endpoint = endpoint + "/" + compactId;
-        // Prepare response
+        // Prepare default response
         var response = new ServerResponseResolve();
         var processResponse = function (xhr) {
             console.log("Resolve Response, HTTP Status " + xhr.status + " - Response text: " + xhr.responseText);
             response.httpStatus = xhr.status;
             response.errorMessage = xhr.statusText;
-            // TODO
-            response.fromResponse(JSON.parse(xhr.responseText))
+            if (response.responseText) {
+                response.fromResponse(JSON.parse(xhr.responseText))
+            }
             callback(response);
         };
         getAjax(endpoint, processResponse, processResponse);
