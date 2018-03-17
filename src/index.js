@@ -23,10 +23,10 @@ var IdentifiersJS = (function () {
     function getAjax(url, success, error) {
         var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
         xhr.open('GET', url);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState>3 && xhr.status==200) {
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState > 3 && xhr.status == 200) {
                 success(xhr);
-            } else if (xhr.readyState>3 && xhr.status!=200) {
+            } else if (xhr.readyState > 3 && xhr.status != 200) {
                 error(xhr);
             }
         };
@@ -112,28 +112,33 @@ var IdentifiersJS = (function () {
         getAjax(endpoint, processResponse, processResponse);
     };
 
+    function printResolveResponse(response) {
+        console.log("---> Resolution of Compact ID '" + compactId + "'");
+        if (typeof selector !== "undefined")
+            console.log("\tSelector '" + selector + "'");
+        console.log("\tResponse API Version " + response.apiVersion);
+        console.log("\tHTTP Status " + response.httpStatus);
+        console.log("\tError Message " + response.errorMessage);
+        if (response.payload) {
+            console.log("\tPayload contains " + response.payload.resolvedResources.length + " resolved resources");
+            if (response.payload.resolvedResources) {
+                for (var resolvedResource in response.payload.resolvedResources) {
+                    console.log("\t- Resolved Resource Location '" + resolvedResource.location + "'");
+                    console.log("\t\tInformation: " + resolvedResource.info);
+                    console.log("\t\tAccess URL: " + resolvedResource.accessUrl);
+                    console.log("\t\tRecommendation Score: " + resolvedResource.recommendation.recommendationIndex);
+                }
+            }
+        }
+    }
+
     function testResolve() {
         var resolver = IdentifiersJS.getResolver('localhost', 8080);
         var compactId = "CHEBI:36927";
         var selector = "ols";
-        resolver.resolve(function(response) {
-            console.log("---> Resolution of Compact ID '" + compactId + "'");
-            console.log("\tResponse API Version " + response.apiVersion);
-            console.log("\tHTTP Status " + response.httpStatus);
-            console.log("\tError Message " + response.errorMessage);
-            if (response.payload) {
-                console.log("\tPayload contains " + response.payload.resolvedResources.length + " resolved resources");
-                if (resopnse.payload.resolvedResources) {
-                    for (var resolvedResource in response.payload.resolvedResources) {
-                        console.log("\t- Resolved Resource Location '" + resolvedResource.location + "'");
-                        console.log("\t\tInformation: " + resolvedResource.info);
-                        console.log("\t\tAccess URL: " + resolvedResource.accessUrl);
-                        console.log("\t\tRecommendation Score: " + resolvedResource.recommendation.recommendationIndex);
-                    }
-                }
-            }
-        }, "CHEBI:36927");
+        resolver.resolve(printResolveResponse, "CHEBI:36927");
     }
+
     // [___ (Resolver) Compact ID Resolution Services ___]
 
     // --- API Services Factory ---
