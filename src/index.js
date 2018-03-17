@@ -73,8 +73,7 @@ var IdentifiersJS = (function () {
         endpoint = endpoint + "/" + compactId;
         // Prepare response
         var response = new ServerResponseResolve();
-
-
+        // TODO
     };
     // [___ (Resolver) Compact ID Resolution Services ___]
 
