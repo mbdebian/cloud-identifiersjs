@@ -45,3 +45,7 @@ development_env_down:
 development_run_tests: development_env_up
 	@echo "<===|DEVOPS|===> [TESTS] Running Unit Tests"
 	@# TODO
+
+build_lib:
+	@echo "<===|DEVOPS|===> [BUILD] Building Library"
+	@# I won't even minify the library at the beginning, sorry
