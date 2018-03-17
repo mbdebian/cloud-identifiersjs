@@ -15,3 +15,7 @@ all: deploy
 
 release: deploy set_next_development_version
 	@echo "<===|DEVOPS|===> [RELEASE] New Release of the library"
+
+sync_project_version:
+	@echo "<===|DEVOPS|===> [SYNC] Synchronizing project version to version '${tag_version}'"
+	@# TODO
