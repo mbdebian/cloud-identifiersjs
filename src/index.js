@@ -61,7 +61,7 @@ var IdentifiersJS = (function () {
 
     ServerResponse.prototype.fromResponse = function (serverResponse) {
         // TODO - Missing checks...
-        console.log("Building Server Response from Object...");
+        console.debug("Building Server Response from Object...");
         this.apiVersion = serverResponse.apiVersion;
         this.errorMessage = serverResponse.errorMessage;
         if (serverResponse.payload) {
