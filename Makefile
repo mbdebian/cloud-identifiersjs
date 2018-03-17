@@ -8,6 +8,7 @@ folder_dist = dist
 folder_src = src
 file_lib_entry_point = index.js
 target_file_name_library = identifiers.js
+s3_target = s3://js-identifiers-org/identifiersjs/
 tag_version = $(shell cat VERSION)
 
 # Default target
@@ -26,7 +27,7 @@ set_next_development_version:
 
 deploy: clean distribution
 	@echo "<===|DEVOPS|===> [DEPLOY] Deploying library, version ${tag_version}"
-	@# TODO
+	@aws s3 cp dist ${s3_target} --recursive
 
 development_env_up:
 	@echo "<===|DEVOPS|===> [ENVIRONMENT] Bringing development environment UP"
