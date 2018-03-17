@@ -39,13 +39,13 @@ var IdentifiersJS = (function () {
         this.recommendationExplanation = "";
     };
 
-    var ResolvedResource = {
-        accessUrl: "",
-        info: "",
-        institution: "",
-        location: "",
-        official: false,
-        recommendation: Object.create(Recommendation)
+    function ResolvedResource() {
+        this.accessUrl = "";
+        this.info = "";
+        this.institution = "";
+        this.location = "";
+        this.official = false;
+        this.recommendation = new Recommendation();
     };
 
     var ResponseResolvePayload = {
