@@ -9,4 +9,7 @@
 var IdentifiersJS = (function () {
     "use strict";
 
+    // Resolver Service
+    var wsResolverHost = 'resolver';
+    var wsResolverPort = '80';
 })();
