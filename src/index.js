@@ -51,6 +51,7 @@ var IdentifiersJS = (function () {
     function ResolverService(host, port) {
         this.host = host;
         this.port = port;
+        console.log("Instance of Resolver Service at host ", host, ", port ", port);
     }
 
     ResolverService.prototype.resolve = function (compactId, selector) {
@@ -62,9 +63,9 @@ var IdentifiersJS = (function () {
     function factoryGetResolver(host, port) {
         var dstHost = wsResolverHost;
         var dstPort = wsResolverPort;
-        if (typeof host !=== undefined) {
+        if (typeof host !== undefined) {
             dstHost = host;
-            if (typeof port !=== undefined) {
+            if (typeof port !== undefined) {
                 dstPort = port;
             }
         }
