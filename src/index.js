@@ -26,10 +26,10 @@ var IdentifiersJS = (function () {
     };
 
     // Server Response
-    var ServerResponse = {
-        apiVersion: "",
-        errorMessage: "",
-        httpStatus: 200
+    function ServerResponse() {
+        this.apiVersion = "";
+        this.errorMessage = "";
+        this.httpStatus = 0;
     };
 
     // --- (Resolver) Compact ID Resolution Services ---
