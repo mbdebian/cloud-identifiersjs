@@ -131,7 +131,7 @@ var IdentifiersJS = (function () {
     function ResolverService(host, port) {
         this.host = host;
         this.port = port;
-        console.log("Instance of Resolver Service at host ", host, ", port ", port);
+        console.info("Instance of Resolver Service at host ", host, ", port ", port);
     }
 
     ResolverService.prototype.resolve = function (callback, compactId, selector) {
