@@ -30,5 +30,9 @@ var IdentifiersJS = (function () {
     };
 
     // --- (Resolver) Compact ID Resolution Services ---
+    var Recommendation = {
+        recommendationIndex: 0,
+        recommendationExplanation: ""
+    };
 
 })();
