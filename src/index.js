@@ -48,13 +48,8 @@ var IdentifiersJS = (function () {
         this.recommendation = new Recommendation();
     };
 
-    var ResponseResolvePayload = {
-
-    }
-
-    function ServerResponseResolve() {
-        ServerResponse.call(this);
-        this.payload = new
+    function ResponseResolvePayload() {
+        this.resolvedResources = [];
     }
 
     // Service Wrapper
