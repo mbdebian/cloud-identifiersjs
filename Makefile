@@ -62,3 +62,5 @@ dist:
 clean:
 	@echo "<===|DEVOPS|===> [CLEAN] Cleaning the space"
 	@rm -rf ${folder_dist}
+
+.PHONY: all clean build_lib distribution deploy release sync_project_version set_next_development_version
