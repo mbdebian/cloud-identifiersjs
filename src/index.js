@@ -72,4 +72,8 @@ var IdentifiersJS = (function () {
         return new ResolverService(host, port);
     }
 
+    return {
+        getResolver: factoryGetResolver
+    };
+
 })();
