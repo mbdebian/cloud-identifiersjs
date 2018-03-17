@@ -30,6 +30,7 @@ var IdentifiersJS = (function () {
     };
 
     // --- (Resolver) Compact ID Resolution Services ---
+    // Models
     var Recommendation = {
         recommendationIndex: 0,
         recommendationExplanation: ""
@@ -46,5 +47,8 @@ var IdentifiersJS = (function () {
 
     var ServerResponseResolve = Object.create(ServerResponse);
 
+    // Service Wrapper
+    // TODO
+    // [___ (Resolver) Compact ID Resolution Services ___]
 
 })();
