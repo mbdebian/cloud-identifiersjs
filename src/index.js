@@ -44,4 +44,7 @@ var IdentifiersJS = (function () {
         recommendation: Object.create(Recommendation)
     };
 
+    var ServerResponseResolve = Object.create(ServerResponse);
+
+
 })();
