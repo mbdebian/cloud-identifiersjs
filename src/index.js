@@ -144,7 +144,7 @@ var IdentifiersJS = (function () {
         // Prepare default response
         var response = new ServerResponseResolve();
         var processResponse = function (xhr) {
-            console.log("Resolve Response, HTTP Status " + xhr.status + " - Response text: " + xhr.responseText);
+            console.debug("Resolve Response, HTTP Status " + xhr.status + " - Response text: " + xhr.responseText);
             response.httpStatus = xhr.status;
             response.errorMessage = xhr.statusText;
             if (xhr.responseText) {
