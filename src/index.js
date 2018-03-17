@@ -13,7 +13,7 @@ var IdentifiersJS = (function () {
     var apiVersion = "1.0";
 
     // Scheme
-    var scheme = 'http'
+    var scheme = 'http';
 
     // Resolver Service
     var wsResolverHost = 'resolver';
@@ -39,21 +39,21 @@ var IdentifiersJS = (function () {
     function ServerRequest() {
         this.apiVersion = apiVersion;
         this.payload = {};
-    };
+    }
 
     // Server Response
     function ServerResponse() {
         this.apiVersion = "";
         this.errorMessage = "";
         this.httpStatus = 0;
-    };
+    }
 
     // --- (Resolver) Compact ID Resolution Services ---
     // Models
     function Recommendation() {
         this.recommendationIndex = 0;
         this.recommendationExplanation = "";
-    };
+    }
 
     function ResolvedResource() {
         this.accessUrl = "";
@@ -62,7 +62,7 @@ var IdentifiersJS = (function () {
         this.location = "";
         this.official = false;
         this.recommendation = new Recommendation();
-    };
+    }
 
     function ResponseResolvePayload() {
         this.resolvedResources = [];
@@ -90,7 +90,9 @@ var IdentifiersJS = (function () {
         // Prepare response
         var response = new ServerResponseResolve();
         var processResponse = function (xhr) {
+            console.log("Resolve Response, HTTP Status " + xhr.status + " - Response text: " + xhr.responseText);
             // TODO
+            callback(response);
         }
         getAjax(endpoint, processResponse, processResponse);
     };
