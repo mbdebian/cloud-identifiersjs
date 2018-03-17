@@ -46,6 +46,7 @@ var IdentifiersJS = (function () {
         this.apiVersion = "";
         this.errorMessage = "";
         this.httpStatus = 0;
+        this.payload = {};
     }
 
     // --- (Resolver) Compact ID Resolution Services ---
