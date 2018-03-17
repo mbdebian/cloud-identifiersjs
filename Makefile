@@ -1,2 +1,11 @@
 # DevOps Little Helper
 # Author: Manuel Bernal-Llinares <mbdebian@gmail.com>
+
+# Environment
+docker_compose_development_file = docker-compose-development.yml
+folder_build = build
+folder_dist = dist
+folder_src = src
+file_lib_entry_point = index.js
+target_file_name_library = identifiers.js
+tag_version = $(shell cat VERSION)
