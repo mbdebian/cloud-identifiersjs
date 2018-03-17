@@ -52,6 +52,11 @@ var IdentifiersJS = (function () {
         this.resolvedResources = [];
     }
 
+    function ServerResponseResolve() {
+        ServerResponse.call(this);
+        this.payload = new ResponseResolvePayload();
+    }
+
     // Service Wrapper
     function ResolverService(host, port) {
         this.host = host;
