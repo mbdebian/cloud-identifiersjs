@@ -14,7 +14,7 @@ var IdentifiersJS = (function () {
 
     // Resolver Service
     var wsResolverHost = 'resolver';
-    var wsResolverPort = '80';
+    var wsResolverPort = '8080';
 
     // Server Request
     var ServerRequest = {
