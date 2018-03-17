@@ -63,6 +63,7 @@ var IdentifiersJS = (function () {
         if (typeof selector !== "undefined") {
             endpoint = endpoint + "/" + selector;
         }
+        endpoint = endpoint + "/" + compactId;
 
     };
     // [___ (Resolver) Compact ID Resolution Services ___]
