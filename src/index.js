@@ -48,7 +48,10 @@ var IdentifiersJS = (function () {
     var ServerResponseResolve = Object.create(ServerResponse);
 
     // Service Wrapper
-    // TODO
+    function ResolverService(host, port) {
+        this.host = host;
+        this.port = port;
+    }
     // [___ (Resolver) Compact ID Resolution Services ___]
 
 })();
