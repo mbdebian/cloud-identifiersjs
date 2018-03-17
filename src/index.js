@@ -11,8 +11,15 @@ var IdentifiersJS = (function () {
 
     // API version compatibility
     var apiVersion = "1.0";
-    
+
     // Resolver Service
     var wsResolverHost = 'resolver';
     var wsResolverPort = '80';
+
+    // Server Requests
+    var ServerRequest = {
+        apiVersion: apiVersion,
+        payload: {}
+    };
+
 })();
