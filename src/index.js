@@ -6,3 +6,7 @@
  *
  * This Javascript library implements services wrappers to access identifiers.org cloud API
  */
+var IdentifiersJS = (function () {
+    "use strict";
+
+})();
