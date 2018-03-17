@@ -53,6 +53,7 @@ var IdentifiersJS = (function () {
         // TODO - Missing checks...
         this.apiVersion = serverResponse.apiVersion;
         this.errorMessage = serverResponse.errorMessage;
+        this.payload = serverResponse.payload;
     }
 
     // --- (Resolver) Compact ID Resolution Services ---
@@ -101,9 +102,10 @@ var IdentifiersJS = (function () {
         var response = new ServerResponseResolve();
         var processResponse = function (xhr) {
             console.log("Resolve Response, HTTP Status " + xhr.status + " - Response text: " + xhr.responseText);
-            // TODO
             response.httpStatus = xhr.status;
             response.errorMessage = xhr.statusText;
+            // TODO
+            response.fromResponse(JSON.parse(xhr.responseText))
             callback(response);
         };
         getAjax(endpoint, processResponse, processResponse);
