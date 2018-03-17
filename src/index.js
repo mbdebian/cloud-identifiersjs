@@ -193,8 +193,8 @@ var IdentifiersJS = (function () {
     }
 
     return {
-        getResolver: factoryGetResolver,
-        unitTestResolver: testResolve
+        getResolver: factoryGetResolver//,
+        //unitTestResolver: testResolve
     };
 
 })();
