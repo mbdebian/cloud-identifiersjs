@@ -27,6 +27,7 @@ set_next_development_version:
 
 deploy: clean distribution
 	@echo "<===|DEVOPS|===> [DEPLOY] Deploying library, version ${tag_version}"
+	@aws s3 rm ${s3_target} --recursive
 	@aws s3 cp dist ${s3_target} --recursive
 
 development_env_up:
