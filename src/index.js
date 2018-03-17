@@ -65,7 +65,7 @@ var IdentifiersJS = (function () {
         this.apiVersion = serverResponse.apiVersion;
         this.errorMessage = serverResponse.errorMessage;
         this.payload.fromResponsePayload(serverResponse.payload);
-    }
+    };
 
     // --- (Resolver) Compact ID Resolution Services ---
     // Models
