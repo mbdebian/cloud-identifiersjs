@@ -92,6 +92,7 @@ var IdentifiersJS = (function () {
         var processResponse = function (xhr) {
             console.log("Resolve Response, HTTP Status " + xhr.status + " - Response text: " + xhr.responseText);
             // TODO
+            response.httpStatus = xhr.status;
             callback(response);
         }
         getAjax(endpoint, processResponse, processResponse);
