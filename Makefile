@@ -49,3 +49,8 @@ development_run_tests: development_env_up
 build_lib:
 	@echo "<===|DEVOPS|===> [BUILD] Building Library"
 	@# I won't even minify the library at the beginning, sorry
+
+distribution: dist build
+	@echo "<===|DEVOPS|===> [DISTRIBUTION] Preparing distribution components of the library"
+	@# TODO - this should be the place for minifying the library
+	@cp ${folder_src}/${file_lib_entry_point} ${folder_dist}/${target_file_name_library}
