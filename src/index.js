@@ -20,9 +20,9 @@ var IdentifiersJS = (function () {
     var wsResolverPort = '8080';
 
     // Server Request
-    var ServerRequest = {
-        apiVersion: apiVersion,
-        payload: {}
+    function ServerRequest() {
+        this.apiVersion = apiVersion;
+        this.payload = {};
     };
 
     // Server Response
