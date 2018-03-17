@@ -63,9 +63,9 @@ var IdentifiersJS = (function () {
     function factoryGetResolver(host, port) {
         var dstHost = wsResolverHost;
         var dstPort = wsResolverPort;
-        if (typeof host !== undefined) {
+        if (typeof host !== "undefined") {
             dstHost = host;
-            if (typeof port !== undefined) {
+            if (typeof port !== "undefined") {
                 dstPort = port;
             }
         }
