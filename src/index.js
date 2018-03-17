@@ -51,30 +51,53 @@ var IdentifiersJS = (function () {
 
     ServerResponse.prototype.fromResponse = function (serverResponse) {
         // TODO - Missing checks...
+        console.log("Building Server Response from Object...");
         this.apiVersion = serverResponse.apiVersion;
         this.errorMessage = serverResponse.errorMessage;
-        this.payload = serverResponse.payload;
+        this.payload.fromResponsePayload(serverResponse.payload);
     }
 
     // --- (Resolver) Compact ID Resolution Services ---
     // Models
-    function Recommendation() {
-        this.recommendationIndex = 0;
-        this.recommendationExplanation = "";
+    function Recommendation(object) {
+        if (object) {
+            this.recommendationIndex = object.recommendationIndex;
+            this.recommendationExplanation = object.recommendationExplanation;
+        } else {
+            this.recommendationIndex = 0;
+            this.recommendationExplanation = "";
+        }
     }
 
-    function ResolvedResource() {
-        this.accessUrl = "";
-        this.info = "";
-        this.institution = "";
-        this.location = "";
-        this.official = false;
-        this.recommendation = new Recommendation();
+    function ResolvedResource(object) {
+        if (object) {
+            console.log("[RESOLVED_RESOURCE] Building from object --> " + JSON.stringify(object));
+            this.accessUrl = object.accessUrl;
+            this.info = object.info;
+            this.institution = object.institution;
+            this.location = object.location;
+            this.official = object.official;
+            this.recommendation = new Recommendation(object.recommendation);
+        } else {
+            this.accessUrl = "";
+            this.info = "";
+            this.institution = "";
+            this.location = "";
+            this.official = false;
+            this.recommendation = new Recommendation();
+        }
     }
 
     function ResponseResolvePayload() {
         this.resolvedResources = [];
     }
+
+    ResponseResolvePayload.prototype.fromResponsePayload = function(responsePayload) {
+        for (var index in responsePayload.resolvedResources) {
+            console.log("[PROCESSING] Resolved Resource " + JSON.stringify(responsePayload.resolvedResources[index]));
+            this.resolvedResources[this.resolvedResources.length] = new ResolvedResource(responsePayload.resolvedResources[index]);
+        }
+    };
 
     function ServerResponseResolve() {
         ServerResponse.call(this);
@@ -104,7 +127,7 @@ var IdentifiersJS = (function () {
             console.log("Resolve Response, HTTP Status " + xhr.status + " - Response text: " + xhr.responseText);
             response.httpStatus = xhr.status;
             response.errorMessage = xhr.statusText;
-            if (response.responseText) {
+            if (xhr.responseText) {
                 response.fromResponse(JSON.parse(xhr.responseText));
             }
             callback(response);
@@ -123,12 +146,12 @@ var IdentifiersJS = (function () {
             if (response.payload) {
                 console.log("\tPayload contains " + response.payload.resolvedResources.length + " resolved resources");
                 if (response.payload.resolvedResources) {
-                    for (var resolvedResource in response.payload.resolvedResources) {
+                    response.payload.resolvedResources.forEach(function(resolvedResource) {
                         console.log("\t- Resolved Resource Location '" + resolvedResource.location + "'");
                         console.log("\t\tInformation: " + resolvedResource.info);
                         console.log("\t\tAccess URL: " + resolvedResource.accessUrl);
                         console.log("\t\tRecommendation Score: " + resolvedResource.recommendation.recommendationIndex);
-                    }
+                    });
                 }
             }
         }
