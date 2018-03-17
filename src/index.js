@@ -64,18 +64,24 @@ var IdentifiersJS = (function () {
         console.log("Building Server Response from Object...");
         this.apiVersion = serverResponse.apiVersion;
         this.errorMessage = serverResponse.errorMessage;
-        this.payload.fromResponsePayload(serverResponse.payload);
+        if (serverResponse.payload) {
+            this.payload.fromResponsePayload(serverResponse.payload);
+        }
     };
 
     // --- (Resolver) Compact ID Resolution Services ---
     // Models
     function Recommendation(object) {
+        // Defaults
+        this.recommendationIndex = 0;
+        this.recommendationExplanation = "";
         if (object) {
-            this.recommendationIndex = object.recommendationIndex;
-            this.recommendationExplanation = object.recommendationExplanation;
-        } else {
-            this.recommendationIndex = 0;
-            this.recommendationExplanation = "";
+            this.recommendationIndex =
+                (object.recommendationIndex !== undefined) ?
+                    object.recommendationIndex : this.recommendationIndex;
+            this.recommendationExplanation =
+                (object.recommendationExplanation !== undefined) ?
+                    object.recommendationExplanation : this.recommendationExplanation;
         }
     }
 
@@ -102,7 +108,7 @@ var IdentifiersJS = (function () {
         this.resolvedResources = [];
     }
 
-    ResponseResolvePayload.prototype.fromResponsePayload = function(responsePayload) {
+    ResponseResolvePayload.prototype.fromResponsePayload = function (responsePayload) {
         for (var index in responsePayload.resolvedResources) {
             //console.log("[PROCESSING] Resolved Resource " + JSON.stringify(responsePayload.resolvedResources[index]));
             this.resolvedResources[this.resolvedResources.length] = new ResolvedResource(responsePayload.resolvedResources[index]);
@@ -146,7 +152,7 @@ var IdentifiersJS = (function () {
     };
 
     function printResolveResponse(compactId, selector) {
-        return function(response) {
+        return function (response) {
             console.log("==================================================================");
             console.log("---> Resolution of Compact ID '" + compactId + "'");
             if (typeof selector !== "undefined")
@@ -157,7 +163,7 @@ var IdentifiersJS = (function () {
             if (response.payload) {
                 console.log("\tPayload contains " + response.payload.resolvedResources.length + " resolved resources");
                 if (response.payload.resolvedResources) {
-                    response.payload.resolvedResources.forEach(function(resolvedResource) {
+                    response.payload.resolvedResources.forEach(function (resolvedResource) {
                         console.log("\t- Resolved Resource Location '" + resolvedResource.location + "'");
                         console.log("\t\tInformation: " + resolvedResource.info);
                         console.log("\t\tAccess URL: " + resolvedResource.accessUrl);
@@ -193,8 +199,8 @@ var IdentifiersJS = (function () {
     }
 
     return {
-        getResolver: factoryGetResolver//,
-        //unitTestResolver: testResolve
+        getResolver: factoryGetResolver,
+        unitTestResolver: testResolve
     };
 
 })();
