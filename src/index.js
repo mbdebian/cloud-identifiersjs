@@ -29,4 +29,6 @@ var IdentifiersJS = (function () {
         httpStatus: 200
     };
 
+    // --- (Resolver) Compact ID Resolution Services ---
+
 })();
