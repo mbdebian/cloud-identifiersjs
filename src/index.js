@@ -16,10 +16,17 @@ var IdentifiersJS = (function () {
     var wsResolverHost = 'resolver';
     var wsResolverPort = '80';
 
-    // Server Requests
+    // Server Request
     var ServerRequest = {
         apiVersion: apiVersion,
         payload: {}
+    };
+
+    // Server Response
+    var ServerResponse = {
+        apiVersion: "",
+        errorMessage: "",
+        httpStatus: 200
     };
 
 })();
