@@ -86,21 +86,23 @@ var IdentifiersJS = (function () {
     }
 
     function ResolvedResource(object) {
+        // Defaults
+        this.accessUrl = "";
+        this.info = "";
+        this.institution = "";
+        this.location = "";
+        this.official = false;
+        this.recommendation = new Recommendation();
         if (object) {
             //console.log("[RESOLVED_RESOURCE] Building from object --> " + JSON.stringify(object));
-            this.accessUrl = object.accessUrl;
-            this.info = object.info;
-            this.institution = object.institution;
-            this.location = object.location;
-            this.official = object.official;
-            this.recommendation = new Recommendation(object.recommendation);
-        } else {
-            this.accessUrl = "";
-            this.info = "";
-            this.institution = "";
-            this.location = "";
-            this.official = false;
-            this.recommendation = new Recommendation();
+            this.accessUrl = (object.accessUrl !== undefined) ? object.accessUrl : this.accessUrl;
+            this.info = (object.info !== undefined) ? object.info : this.info;
+            this.institution = (object.institution !== undefined) ? object.institution : this.institution;
+            this.location = (object.location !== undefined) ? object.location : this.location;
+            this.official = (object.official !== undefined) ? object.official : this.official;
+            if (object.recommendation) {
+                this.recommendation = new Recommendation(object.recommendation);
+            }
         }
     }
 
