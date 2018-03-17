@@ -12,3 +12,6 @@ tag_version = $(shell cat VERSION)
 
 # Default target
 all: deploy
+
+release: deploy set_next_development_version
+	@echo "<===|DEVOPS|===> [RELEASE] New Release of the library"
