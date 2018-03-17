@@ -111,6 +111,29 @@ var IdentifiersJS = (function () {
         };
         getAjax(endpoint, processResponse, processResponse);
     };
+
+    function testResolve() {
+        var resolver = IdentifiersJS.getResolver('localhost', 8080);
+        var compactId = "CHEBI:36927";
+        var selector = "ols";
+        resolver.resolve(function(response) {
+            console.log("---> Resolution of Compact ID '" + compactId + "'");
+            console.log("\tResponse API Version " + response.apiVersion);
+            console.log("\tHTTP Status " + response.httpStatus);
+            console.log("\tError Message " + response.errorMessage);
+            if (response.payload) {
+                console.log("\tPayload contains " + response.payload.resolvedResources.length + " resolved resources");
+                if (resopnse.payload.resolvedResources) {
+                    for (var resolvedResource in response.payload.resolvedResources) {
+                        console.log("\t- Resolved Resource Location '" + resolvedResource.location + "'");
+                        console.log("\t\tInformation: " + resolvedResource.info);
+                        console.log("\t\tAccess URL: " + resolvedResource.accessUrl);
+                        console.log("\t\tRecommendation Score: " + resolvedResource.recommendation.recommendationIndex);
+                    }
+                }
+            }
+        }, "CHEBI:36927");
+    }
     // [___ (Resolver) Compact ID Resolution Services ___]
 
     // --- API Services Factory ---
