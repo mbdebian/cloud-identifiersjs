@@ -98,7 +98,7 @@ var IdentifiersJS = (function () {
             response.httpStatus = xhr.status;
             response.errorMessage = xhr.statusText;
             callback(response);
-        }
+        };
         getAjax(endpoint, processResponse, processResponse);
     };
     // [___ (Resolver) Compact ID Resolution Services ___]
