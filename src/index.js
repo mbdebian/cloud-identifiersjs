@@ -155,7 +155,8 @@ var IdentifiersJS = (function () {
     }
 
     return {
-        getResolver: factoryGetResolver
+        getResolver: factoryGetResolver,
+        unitTestResolver: testResolve()
     };
 
 })();
