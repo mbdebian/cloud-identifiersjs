@@ -49,9 +49,11 @@ var IdentifiersJS = (function () {
         this.payload = {};
     }
 
-    ServerResponse.prototype.fromJson = function (json) {
-        // TODO
-    };
+    ServerResponse.prototype.fromResponse = function (serverResponse) {
+        // TODO - Missing checks...
+        this.apiVersion = serverResponse.apiVersion;
+        this.errorMessage = serverResponse.errorMessage;
+    }
 
     // --- (Resolver) Compact ID Resolution Services ---
     // Models
