@@ -58,3 +58,7 @@ distribution: dist build
 dist:
 	@echo "<===|DEVOPS|===> [FOLDER] Creating distribution folder"
 	@mkdir -p ${folder_dist}
+
+clean:
+	@echo "<===|DEVOPS|===> [CLEAN] Cleaning the space"
+	@rm -rf ${folder_dist}
