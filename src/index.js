@@ -59,6 +59,8 @@ var IdentifiersJS = (function () {
 
     ResolverService.prototype.resolve = function (callback, compactId, selector) {
         // TODO
+        var endpoint = scheme + "://" + this.host + ":" + this.port;
+
     };
     // [___ (Resolver) Compact ID Resolution Services ___]
 
