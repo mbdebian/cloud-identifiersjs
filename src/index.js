@@ -93,6 +93,7 @@ var IdentifiersJS = (function () {
             console.log("Resolve Response, HTTP Status " + xhr.status + " - Response text: " + xhr.responseText);
             // TODO
             response.httpStatus = xhr.status;
+            response.errorMessage = xhr.statusText;
             callback(response);
         }
         getAjax(endpoint, processResponse, processResponse);
