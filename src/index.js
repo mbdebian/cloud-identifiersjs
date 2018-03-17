@@ -26,7 +26,7 @@ var IdentifiersJS = (function () {
         xhr.onreadystatechange = function() {
             if (xhr.readyState>3 && xhr.status==200) {
                 success(xhr);
-            } else {
+            } else if (xhr.readyState>3 && xhr.status!=200) {
                 error(xhr);
             }
         };
