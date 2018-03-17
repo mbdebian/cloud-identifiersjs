@@ -54,3 +54,7 @@ distribution: dist build
 	@echo "<===|DEVOPS|===> [DISTRIBUTION] Preparing distribution components of the library"
 	@# TODO - this should be the place for minifying the library
 	@cp ${folder_src}/${file_lib_entry_point} ${folder_dist}/${target_file_name_library}
+
+dist:
+	@echo "<===|DEVOPS|===> [FOLDER] Creating distribution folder"
+	@mkdir -p ${folder_dist}
