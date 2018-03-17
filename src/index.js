@@ -49,6 +49,10 @@ var IdentifiersJS = (function () {
         this.payload = {};
     }
 
+    ServerResponse.prototype.fromJson = function (json) {
+        // TODO
+    };
+
     // --- (Resolver) Compact ID Resolution Services ---
     // Models
     function Recommendation() {
