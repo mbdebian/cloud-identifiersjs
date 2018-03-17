@@ -111,9 +111,11 @@ var IdentifiersJS = (function () {
     }
 
     ResponseResolvePayload.prototype.fromResponsePayload = function (responsePayload) {
-        for (var index in responsePayload.resolvedResources) {
-            //console.log("[PROCESSING] Resolved Resource " + JSON.stringify(responsePayload.resolvedResources[index]));
-            this.resolvedResources[this.resolvedResources.length] = new ResolvedResource(responsePayload.resolvedResources[index]);
+        if (responsePayload.resolvedResources) {
+            for (var index in responsePayload.resolvedResources) {
+                //console.log("[PROCESSING] Resolved Resource " + JSON.stringify(responsePayload.resolvedResources[index]));
+                this.resolvedResources[this.resolvedResources.length] = new ResolvedResource(responsePayload.resolvedResources[index]);
+            }
         }
     };
 
