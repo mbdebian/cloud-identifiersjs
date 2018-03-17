@@ -9,3 +9,6 @@ folder_src = src
 file_lib_entry_point = index.js
 target_file_name_library = identifiers.js
 tag_version = $(shell cat VERSION)
+
+# Default target
+all: deploy
