@@ -71,7 +71,7 @@ var IdentifiersJS = (function () {
 
     function ResolvedResource(object) {
         if (object) {
-            console.log("[RESOLVED_RESOURCE] Building from object --> " + JSON.stringify(object));
+            //console.log("[RESOLVED_RESOURCE] Building from object --> " + JSON.stringify(object));
             this.accessUrl = object.accessUrl;
             this.info = object.info;
             this.institution = object.institution;
@@ -94,7 +94,7 @@ var IdentifiersJS = (function () {
 
     ResponseResolvePayload.prototype.fromResponsePayload = function(responsePayload) {
         for (var index in responsePayload.resolvedResources) {
-            console.log("[PROCESSING] Resolved Resource " + JSON.stringify(responsePayload.resolvedResources[index]));
+            //console.log("[PROCESSING] Resolved Resource " + JSON.stringify(responsePayload.resolvedResources[index]));
             this.resolvedResources[this.resolvedResources.length] = new ResolvedResource(responsePayload.resolvedResources[index]);
         }
     };
@@ -137,6 +137,7 @@ var IdentifiersJS = (function () {
 
     function printResolveResponse(compactId, selector) {
         return function(response) {
+            console.log("==================================================================");
             console.log("---> Resolution of Compact ID '" + compactId + "'");
             if (typeof selector !== "undefined")
                 console.log("\tSelector '" + selector + "'");
@@ -154,14 +155,16 @@ var IdentifiersJS = (function () {
                     });
                 }
             }
-        }
+            console.log("==================================================================");
+        };
     }
 
     function testResolve() {
         var resolver = IdentifiersJS.getResolver('localhost', 8080);
         var compactId = "CHEBI:36927";
         var selector = "ols";
-        resolver.resolve(printResolveResponse(compactId), "CHEBI:36927");
+        resolver.resolve(printResolveResponse(compactId), compactId);
+        resolver.resolve(printResolveResponse(compactId, selector), compactId, selector);
     }
 
     // [___ (Resolver) Compact ID Resolution Services ___]
