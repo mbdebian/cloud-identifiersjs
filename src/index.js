@@ -54,7 +54,7 @@ var IdentifiersJS = (function () {
         console.log("Instance of Resolver Service at host ", host, ", port ", port);
     }
 
-    ResolverService.prototype.resolve = function (compactId, selector) {
+    ResolverService.prototype.resolve = function (callback, compactId, selector) {
         // TODO
     };
     // [___ (Resolver) Compact ID Resolution Services ___]
