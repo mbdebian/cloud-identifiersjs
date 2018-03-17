@@ -34,9 +34,9 @@ var IdentifiersJS = (function () {
 
     // --- (Resolver) Compact ID Resolution Services ---
     // Models
-    var Recommendation = {
-        recommendationIndex: 0,
-        recommendationExplanation: ""
+    function Recommendation() {
+        this.recommendationIndex = 0;
+        this.recommendationExplanation = "";
     };
 
     var ResolvedResource = {
@@ -48,7 +48,14 @@ var IdentifiersJS = (function () {
         recommendation: Object.create(Recommendation)
     };
 
-    var ServerResponseResolve = Object.create(ServerResponse);
+    var ResponseResolvePayload = {
+
+    }
+
+    function ServerResponseResolve() {
+        ServerResponse.call(this);
+        this.payload = new
+    }
 
     // Service Wrapper
     function ResolverService(host, port) {
@@ -64,6 +71,9 @@ var IdentifiersJS = (function () {
             endpoint = endpoint + "/" + selector;
         }
         endpoint = endpoint + "/" + compactId;
+        // Prepare response
+        var response = Object.create(ServerResponseResolve);
+
 
     };
     // [___ (Resolver) Compact ID Resolution Services ___]
