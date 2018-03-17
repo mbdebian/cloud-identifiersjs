@@ -69,7 +69,7 @@ var IdentifiersJS = (function () {
                 dstPort = port;
             }
         }
-        return new ResolverService(host, port);
+        return new ResolverService(dstHost, dstPort);
     }
 
     return {
