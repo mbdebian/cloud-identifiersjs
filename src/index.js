@@ -191,12 +191,25 @@ var IdentifiersJS = (function () {
         };
     }
 
+    function printResolvedResource(resolvedResource) {
+        console.log("============= Resolved Resource =======================");
+        console.log("\t- Resolved Resource Location '" + resolvedResource.location + "'");
+        console.log("\t\tInformation: " + resolvedResource.info);
+        console.log("\t\tAccess URL: " + resolvedResource.accessUrl);
+        console.log("\t\tRecommendation Score: " + resolvedResource.recommendation.recommendationIndex);
+        console.log("=======================================================");
+    }
+
     function testResolve() {
         var resolver = IdentifiersJS.getResolver('localhost', 8080);
         var compactId = "CHEBI:36927";
         var selector = "ols";
         resolver.resolve(printResolveResponse(compactId), compactId);
         resolver.resolve(printResolveResponse(compactId, selector), compactId, selector);
+        console.log("Highest recommended Resolved Resource:");
+        resolver.resolve(function (response) {
+            printResolvedResource(resolver.getHighestRecommendedResolvedResource(response.payload.resolvedResources));
+        }, compactId);
     }
 
     // [___ (Resolver) Compact ID Resolution Services ___]
