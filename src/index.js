@@ -87,6 +87,8 @@ var IdentifiersJS = (function () {
 
     function ResolvedResource(object) {
         // Defaults
+        this.id = "";
+        this.resourcePrefix = "";
         this.accessUrl = "";
         this.info = "";
         this.institution = "";
@@ -95,6 +97,8 @@ var IdentifiersJS = (function () {
         this.recommendation = new Recommendation();
         if (object) {
             //console.log("[RESOLVED_RESOURCE] Building from object --> " + JSON.stringify(object));
+            this.id = (object.id !== undefined) ? object.id : this.id;
+            this.resourcePrefix = (object.resourcePrefix !== undefined) ? object.resourcePrefix : this.resourcePrefix;
             this.accessUrl = (object.accessUrl !== undefined) ? object.accessUrl : this.accessUrl;
             this.info = (object.info !== undefined) ? object.info : this.info;
             this.institution = (object.institution !== undefined) ? object.institution : this.institution;
@@ -192,11 +196,12 @@ var IdentifiersJS = (function () {
     }
 
     function printResolvedResource(resolvedResource) {
-        console.log("============= Resolved Resource =======================");
-        console.log("\t- Resolved Resource Location '" + resolvedResource.location + "'");
-        console.log("\t\tInformation: " + resolvedResource.info);
-        console.log("\t\tAccess URL: " + resolvedResource.accessUrl);
-        console.log("\t\tRecommendation Score: " + resolvedResource.recommendation.recommendationIndex);
+        console.log("============= Resolved Resource ID " + resolvedResource.id + " =======================");
+        console.log("\tResolved Resource Location '" + resolvedResource.location + "'");
+        console.log("\tResolved Resource Prefix '" + resolvedResource.resourcePrefix + "'");
+        console.log("\tInformation: " + resolvedResource.info);
+        console.log("\tAccess URL: " + resolvedResource.accessUrl);
+        console.log("\tRecommendation Score: " + resolvedResource.recommendation.recommendationIndex);
         console.log("=======================================================");
     }
 
