@@ -155,6 +155,18 @@ var IdentifiersJS = (function () {
         getAjax(endpoint, processResponse, processResponse);
     };
 
+    ResolverService.prototype.getHighestRecommendedResolvedResource = function (resolvedResources) {
+        return this.sortResolvedResourcesByRecommendationIndexAscending(resolvedResources)[resolvedResources.length - 1];
+    };
+
+    ResolverService.prototype.sortResolvedResourcesByRecommendationIndexAscending = function (resolvedResources) {
+        if (resolvedResources) {
+            return resolvedResources.sort(function (a, b) {
+                return a.recommendation.recommendationIndex - b.recommendation.recommendationIndex; });
+        }
+        return resolvedResources;
+    };
+
     function printResolveResponse(compactId, selector) {
         return function (response) {
             console.log("==================================================================");
@@ -206,5 +218,4 @@ var IdentifiersJS = (function () {
         getResolver: factoryGetResolver,
         unitTestResolver: testResolve
     };
-
 })();
