@@ -60,7 +60,7 @@ var IdentifiersJS = (function () {
     }
 
     ServerResponse.prototype.fromResponse = function (serverResponse) {
-        console.debug("Building Server Response from Object...");
+        //console.debug("Building Server Response from Object...");
         this.apiVersion = (serverResponse.apiVersion !== undefined) ? serverResponse.apiVersion : this.apiVersion;
         this.errorMessage = (serverResponse.errorMessage !== undefined) ?
             serverResponse.errorMessage : this.errorMessage;
@@ -211,7 +211,7 @@ var IdentifiersJS = (function () {
         var selector = "ols";
         resolver.resolve(printResolveResponse(compactId), compactId);
         resolver.resolve(printResolveResponse(compactId, selector), compactId, selector);
-        console.log("Highest recommended Resolved Resource:");
+        console.debug("Highest recommended Resolved Resource:");
         resolver.resolve(function (response) {
             printResolvedResource(resolver.getHighestRecommendedResolvedResource(response.payload.resolvedResources));
         }, compactId);
