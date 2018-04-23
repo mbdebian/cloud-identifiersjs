@@ -141,6 +141,7 @@ var IdentifiersJS = (function () {
         this.email = "";
         if (object) {
             this.name = (object.name !== undefined) ? object.name : this.name;
+            this.email = (object.email !== undefined) ? object.email : this.email;
         }
     }
 
