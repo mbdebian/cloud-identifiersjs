@@ -145,8 +145,8 @@ var IdentifiersJS = (function () {
         this.payload = new ServiceResponseRegisterPrefixPayload();
     }
 
-    function ServiceResponseRegisterPrefixPayload(object) {
-        // TODO
+    function ServiceResponseRegisterPrefixPayload() {
+        this.comment = "";
     }
 
     function PrefixRequester(object) {
