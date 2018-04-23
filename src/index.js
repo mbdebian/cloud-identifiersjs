@@ -145,6 +145,10 @@ var IdentifiersJS = (function () {
         this.payload = new ServiceResponseRegisterPrefixPayload();
     }
 
+    function ServiceResponseRegisterPrefixPayload(object) {
+        // TODO
+    }
+
     function PrefixRequester(object) {
         this.name = "";
         this.email = "";
