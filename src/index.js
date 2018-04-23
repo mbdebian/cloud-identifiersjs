@@ -306,6 +306,7 @@ var IdentifiersJS = (function () {
 
     RegistryService.prototype.requestPrefixRegistration = function (callback, payload) {
         // TODO
+        var endpoint = this.getServiceApiBaseline();
     };
 
     RegistryService.prototype.requestValidationName = function (callback, payload) {
