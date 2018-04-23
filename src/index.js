@@ -163,6 +163,7 @@ var IdentifiersJS = (function () {
             this.organization = (object.organization) !== undefined ? object.organization : this.organization;
             this.preferredPrefix = (object.preferredPrefix !== undefined) ? object.preferredPrefix : this.preferredPrefix;
             this.resourceAccessRule = (object.resourceAccessRule !== undefined) ? object.resourceAccessRule : this.resourceAccessRule;
+            this.exampleIdentifier = (object.exampleIdentifier !== undefined) ? object.exampleIdentifier : this.exampleIdentifier;
         }
     }
     // --- END - (REGISTRY) Compact ID Resolution Services ---
