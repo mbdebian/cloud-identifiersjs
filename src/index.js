@@ -150,7 +150,7 @@ var IdentifiersJS = (function () {
     }
 
     ServiceResponseRegisterPrefixPayload.prototype.fromResponsePayload = function (object) {
-        // TODO
+        this.comment = (object.comment !== undefined) object.comment : this.comment;
     };
 
     function PrefixRequester(object) {
