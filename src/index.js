@@ -304,7 +304,7 @@ var IdentifiersJS = (function () {
         return scheme + "://" + this.host + ":" + this.port;
     };
 
-    RegistryService.prototype.makePostRequest(callback, requestBody) {
+    RegistryService.prototype.makePostRequest(callback, requestBody, defaultResponse) {
         // TODO
     }
 
