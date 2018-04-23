@@ -317,6 +317,10 @@ var IdentifiersJS = (function () {
         // TODO - Post request
     };
 
+    RegistryService.prototype.makeValidationRequest = function (callback, endpoint) {
+
+    };
+
     RegistryService.prototype.requestPrefixRegistration = function (callback, payload) {
         var endpoint = this.getServiceApiBaseline();
         // TODO
