@@ -214,7 +214,6 @@ var IdentifiersJS = (function () {
     }
 
     ResolverService.prototype.resolve = function (callback, compactId, selector) {
-        // TODO
         var endpoint = scheme + "://" + this.host + ":" + this.port;
         if (typeof selector !== "undefined") {
             endpoint = endpoint + "/" + selector;
@@ -297,7 +296,7 @@ var IdentifiersJS = (function () {
     // --- Service Wrappers --- REGISTRY
     // [___ (REGISTRY) Compact ID Resolution Services ___]
 
-    
+
     // --- API Services Factory ---
     function factoryGetResolver(host, port) {
         var dstHost = wsResolverHost;
