@@ -142,7 +142,9 @@ var IdentifiersJS = (function () {
     }
 
     function ServiceRequestRegisterPrefix() {
-        // TODO
+        ServerRequest.call(this);
+        // Default payload
+        this.payload = new ServiceRequestRegisterPrefixPayload();
     }
 
     function ServiceResponseRegisterPrefix() {
