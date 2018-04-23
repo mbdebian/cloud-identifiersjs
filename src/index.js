@@ -150,6 +150,7 @@ var IdentifiersJS = (function () {
         this.regexPattern = "";
         this.references = [];
         this.additionalInformation = "";
+        this.requester = PrefixRequester();
     }
     // --- END - (REGISTRY) Compact ID Resolution Services ---
 
