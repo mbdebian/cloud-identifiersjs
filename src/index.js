@@ -168,6 +168,7 @@ var IdentifiersJS = (function () {
         this.requester = new PrefixRequester();
     }
 
+    // I didn't need this, ok, it's Monday, fair enough... :P
     ServiceRequestRegisterPrefixPayload.prototype.fromResponsePayload = function (object) {
         this.name = (object.name !== undefined) ? object.name : this.name;
         this.description = (object.description !== undefined) ? object.description : this.description;
