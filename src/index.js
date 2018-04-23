@@ -136,7 +136,6 @@ var IdentifiersJS = (function () {
     // --- (REGISTRY) Compact ID Resolution Services ---
     // Models
     function PrefixRequester(object) {
-        // TODO
         this.name = "";
         this.email = "";
         if (object) {
@@ -157,6 +156,9 @@ var IdentifiersJS = (function () {
         this.references = [];
         this.additionalInformation = "";
         this.requester = PrefixRequester();
+        if (object) {
+
+        }
     }
     // --- END - (REGISTRY) Compact ID Resolution Services ---
 
