@@ -325,7 +325,7 @@ var IdentifiersJS = (function () {
     };
 
     RegistryService.prototype.requestValidationOrganization = function (callback, payload) {
-        var endpoint = this.getServiceApiBaseline() + "/";
+        var endpoint = this.getServiceApiBaseline() + "/validateRegisterPrefixOrganization";
         // TODO
     };
 
