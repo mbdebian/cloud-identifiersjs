@@ -135,6 +135,10 @@ var IdentifiersJS = (function () {
 
     // --- (REGISTRY) Compact ID Resolution Services ---
     // Models
+    function ServiceRequestValidate() {
+        // TODO
+    }
+
     function ServiceResponseRegisterPrefix() {
         ServerResponse.call(this);
         this.payload = new ServiceResponseRegisterPrefixPayload();
