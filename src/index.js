@@ -300,51 +300,52 @@ var IdentifiersJS = (function () {
         console.info("Instance of Registry Service at host ", host, ", port ", port);
     }
 
-    ResolverService.prototype.requestPrefixRegistration = function (callback, payload) {
+
+    RegistryService.prototype.requestPrefixRegistration = function (callback, payload) {
         // TODO
     };
 
-    ResolverService.prototype.requestValidationName = function (callback, payload) {
+    RegistryService.prototype.requestValidationName = function (callback, payload) {
         // TODO
     };
 
-    ResolverService.prototype.requestValidationDescription = function (callback, payload) {
+    RegistryService.prototype.requestValidationDescription = function (callback, payload) {
         // TODO
     };
 
-    ResolverService.prototype.requestValidationHomePage = function (callback, payload) {
+    RegistryService.prototype.requestValidationHomePage = function (callback, payload) {
         // TODO
     };
 
-    ResolverService.prototype.requestValidationOrganization = function (callback, payload) {
+    RegistryService.prototype.requestValidationOrganization = function (callback, payload) {
         // TODO
     };
 
-    ResolverService.prototype.requestValidationPreferredPrefix = function (callback, payload) {
+    RegistryService.prototype.requestValidationPreferredPrefix = function (callback, payload) {
         // TODO
     };
 
-    ResolverService.prototype.requestValidationResourceAccessRule = function (callback, payload) {
+    RegistryService.prototype.requestValidationResourceAccessRule = function (callback, payload) {
         // TODO
     };
 
-    ResolverService.prototype.requestValidationExampleIdentifier = function (callback, payload) {
+    RegistryService.prototype.requestValidationExampleIdentifier = function (callback, payload) {
         // TODO
     };
 
-    ResolverService.prototype.requestValidationRegexPattern = function (callback, payload) {
+    RegistryService.prototype.requestValidationRegexPattern = function (callback, payload) {
         // TODO
     };
 
-    ResolverService.prototype.requestValidationReferences = function (callback, payload) {
+    RegistryService.prototype.requestValidationReferences = function (callback, payload) {
         // TODO
     };
 
-    ResolverService.prototype.requestValidationAdditionalInformation = function (callback, payload) {
+    RegistryService.prototype.requestValidationAdditionalInformation = function (callback, payload) {
         // TODO
     };
 
-    ResolverService.prototype.requestValidationRequester = function (callback, payload) {
+    RegistryService.prototype.requestValidationRequester = function (callback, payload) {
         // TODO
     };
     // [___ (REGISTRY) Compact ID Resolution Services ___]
