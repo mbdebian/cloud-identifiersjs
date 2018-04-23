@@ -318,7 +318,7 @@ var IdentifiersJS = (function () {
     };
 
     RegistryService.prototype.makeValidationRequest = function (callback, endpoint) {
-
+        // TODO
     };
 
     RegistryService.prototype.requestPrefixRegistration = function (callback, payload) {
