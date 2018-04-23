@@ -304,8 +304,17 @@ var IdentifiersJS = (function () {
         return scheme + "://" + this.host + ":" + this.port;
     };
 
-    RegistryService.prototype.makePostRequest(callback, requestBody, defaultResponse) {
-        // TODO
+    RegistryService.prototype.makePostRequest(callback, endpoint, request, defaultResponse) {
+        var processResponse = function (xhr) {
+            console.debug("Registry Service Response, HTTP Status " + xhr.status + " - Response text: " + xhr.responseText);
+            defaultResponse.httpStatus = xhr.status;
+            defaultResponse.errorMessage = xhr.statusText;
+            if (xhr.responseText) {
+                defaultResponse.fromResponse(JSON.parse(xhr.responseText));
+            }
+            callback(defaultResponse);
+        };
+        // TODO - Post request
     }
 
     RegistryService.prototype.requestPrefixRegistration = function (callback, payload) {
