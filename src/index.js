@@ -143,6 +143,7 @@ var IdentifiersJS = (function () {
         this.preferredPrefix = "";
         this.resourceAccessRule = "";
         this.exampleIdentifier = "";
+        this.regexPattern = "";
     }
     // --- END - (REGISTRY) Compact ID Resolution Services ---
 
