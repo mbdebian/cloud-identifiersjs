@@ -160,7 +160,7 @@ var IdentifiersJS = (function () {
         this.regexPattern = "";
         this.references = [];
         this.additionalInformation = "";
-        this.requester = PrefixRequester();
+        this.requester = new PrefixRequester();
         if (object) {
             this.name = (object.name !== undefined) ? object.name : this.name;
             this.description = (object.description !== undefined) ? object.description : this.description;
@@ -172,7 +172,7 @@ var IdentifiersJS = (function () {
             this.regexPattern = (object.regexPattern !== undefined) ? object.regexPattern : this.regexPattern;
             this.references = (object.references !== undefined) ? object.references : this.references;
             this.additionalInformation = (object.additionalInformation !== undefined) ? object.additionalInformation : this.additionalInformation;
-            this.requester = (object.requester !== undefined) ? PrefixRequester(object.requester) : this.requester;
+            this.requester = (object.requester !== undefined) ? new PrefixRequester(object.requester) : this.requester;
         }
     }
     // --- END - (REGISTRY) Compact ID Resolution Services ---
