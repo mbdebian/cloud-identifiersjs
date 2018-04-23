@@ -304,7 +304,7 @@ var IdentifiersJS = (function () {
         return scheme + "://" + this.host + ":" + this.port;
     };
 
-    RegistryService.prototype.makePostRequest(callback, endpoint, request, defaultResponse) {
+    RegistryService.prototype.makePostRequest = function(callback, endpoint, request, defaultResponse) {
         var processResponse = function (xhr) {
             console.debug("Registry Service Response, HTTP Status " + xhr.status + " - Response text: " + xhr.responseText);
             defaultResponse.httpStatus = xhr.status;
@@ -315,7 +315,7 @@ var IdentifiersJS = (function () {
             callback(defaultResponse);
         };
         // TODO - Post request
-    }
+    };
 
     RegistryService.prototype.requestPrefixRegistration = function (callback, payload) {
         var endpoint = this.getServiceApiBaseline();
