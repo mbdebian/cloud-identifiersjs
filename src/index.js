@@ -300,9 +300,10 @@ var IdentifiersJS = (function () {
         console.info("Instance of Registry Service at host ", host, ", port ", port);
     }
 
-    ResolverService.prototype.requestPrefixRegistration = function (callback, prefixRegistrationPayload) {
+    ResolverService.prototype.requestPrefixRegistration = function (callback, payload) {
         // TODO
     };
+
     // [___ (REGISTRY) Compact ID Resolution Services ___]
 
 
