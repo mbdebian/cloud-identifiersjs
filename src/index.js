@@ -166,6 +166,7 @@ var IdentifiersJS = (function () {
             this.exampleIdentifier = (object.exampleIdentifier !== undefined) ? object.exampleIdentifier : this.exampleIdentifier;
             this.regexPattern = (object.regexPattern !== undefined) ? object.regexPattern : this.regexPattern;
             this.references = (object.references !== undefined) ? object.references : this.references;
+            this.additionalInformation = (object.additionalInformation !== undefined) ? object.additionalInformation : this.additionalInformation;
         }
     }
     // --- END - (REGISTRY) Compact ID Resolution Services ---
