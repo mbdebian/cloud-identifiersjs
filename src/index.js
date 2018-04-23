@@ -137,7 +137,7 @@ var IdentifiersJS = (function () {
     // Models
     function ServiceResponseValidateRequest() {
         ServerResponse.call(this);
-        // TODO
+        this.payload = new ServiceRequestRegisterPrefixPayload();
     }
 
     function PrefixRequester(object) {
