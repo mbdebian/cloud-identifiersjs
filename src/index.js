@@ -140,6 +140,8 @@ var IdentifiersJS = (function () {
         this.description = "";
         this.homePage = "";
         this.organization = "";
+        this.preferredPrefix = "";
+        
     }
     // --- END - (REGISTRY) Compact ID Resolution Services ---
 
