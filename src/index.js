@@ -131,7 +131,11 @@ var IdentifiersJS = (function () {
     ServerResponseResolve.prototype = Object.create(ServerResponse.prototype);
     ServerResponseResolve.prototype.constructor = ServerResponseResolve;
 
-    // Service Wrapper
+
+
+
+
+    // --- Service Wrappers ---
     function ResolverService(host, port) {
         this.host = host;
         this.port = port;
