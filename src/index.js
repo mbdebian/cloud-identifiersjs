@@ -137,6 +137,7 @@ var IdentifiersJS = (function () {
     // Models
     function ServiceRequestRegisterPrefixPayload(object) {
         this.name = "";
+        this.description = "";
     }
     // --- END - (REGISTRY) Compact ID Resolution Services ---
 
