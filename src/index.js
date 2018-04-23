@@ -315,6 +315,10 @@ var IdentifiersJS = (function () {
     ResolverService.prototype.requestValidationHomePage = function (callback, payload) {
         // TODO
     };
+
+    ResolverService.prototype.requestValidationOrganization = function (callback, payload) {
+        // TODO
+    };
     // [___ (REGISTRY) Compact ID Resolution Services ___]
 
 
