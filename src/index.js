@@ -327,6 +327,10 @@ var IdentifiersJS = (function () {
     ResolverService.prototype.requestValidationResourceAccessRule = function (callback, payload) {
         // TODO
     };
+
+    ResolverService.prototype.requestValidationExampleIdentifier = function (callback, payload) {
+        // TODO
+    };
     // [___ (REGISTRY) Compact ID Resolution Services ___]
 
 
