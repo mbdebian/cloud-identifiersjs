@@ -139,6 +139,10 @@ var IdentifiersJS = (function () {
         // TODO
     }
 
+    function ServiceRequestRegisterPrefix() {
+        // TODO
+    }
+
     function ServiceResponseRegisterPrefix() {
         ServerResponse.call(this);
         this.payload = new ServiceResponseRegisterPrefixPayload();
