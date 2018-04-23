@@ -162,7 +162,7 @@ var IdentifiersJS = (function () {
     }
 
     ServiceResponseRegisterPrefixPayload.prototype.fromResponsePayload = function (object) {
-        this.comment = (object.comment !== undefined) object.comment : this.comment;
+        this.comment = (object.comment !== undefined) ? object.comment : this.comment;
     };
 
     function PrefixRequester(object) {
