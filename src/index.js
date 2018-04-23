@@ -206,7 +206,7 @@ var IdentifiersJS = (function () {
     // --- END - (REGISTRY) Compact ID Resolution Services ---
 
 
-    // --- Service Wrappers ---
+    // --- Service Wrappers --- RESOLVER
     function ResolverService(host, port) {
         this.host = host;
         this.port = port;
@@ -291,9 +291,13 @@ var IdentifiersJS = (function () {
             printResolvedResource(resolver.getHighestRecommendedResolvedResource(response.payload.resolvedResources));
         }, compactId);
     }
+    // [___ (RESOLVER) Compact ID Resolution Services ___]
 
-    // [___ (Resolver) Compact ID Resolution Services ___]
 
+    // --- Service Wrappers --- REGISTRY
+    // [___ (REGISTRY) Compact ID Resolution Services ___]
+
+    
     // --- API Services Factory ---
     function factoryGetResolver(host, port) {
         var dstHost = wsResolverHost;
