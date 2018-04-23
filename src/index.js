@@ -294,6 +294,12 @@ var IdentifiersJS = (function () {
 
 
     // --- Service Wrappers --- REGISTRY
+    function RegistryService(host, port) {
+        this.host = host;
+        this.port = port;
+        console.info("Instance of Registry Service at host ", host, ", port ", port);
+    }
+
     // [___ (REGISTRY) Compact ID Resolution Services ___]
 
 
