@@ -300,6 +300,9 @@ var IdentifiersJS = (function () {
         console.info("Instance of Registry Service at host ", host, ", port ", port);
     }
 
+    RegistryService.prototype.getServiceApiBaseline = function () {
+        return scheme + "://" + this.host + ":" + this.port;
+    };
 
     RegistryService.prototype.requestPrefixRegistration = function (callback, payload) {
         // TODO
