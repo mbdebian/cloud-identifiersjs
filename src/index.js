@@ -133,6 +133,10 @@ var IdentifiersJS = (function () {
     // --- END - (RESOLVER) Compact ID Resolution Services ---
 
 
+    // --- (REGISTRY) Compact ID Resolution Services ---
+    // Models
+    
+    // --- END - (REGISTRY) Compact ID Resolution Services ---
 
 
     // --- Service Wrappers ---
