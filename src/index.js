@@ -345,6 +345,7 @@ var IdentifiersJS = (function () {
     };
 
     RegistryService.prototype.requestValidationRegexPattern = function (callback, payload) {
+        var endpoint = this.getServiceApiBaseline() + "/";
         // TODO
     };
 
