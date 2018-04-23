@@ -145,6 +145,7 @@ var IdentifiersJS = (function () {
         this.exampleIdentifier = "";
         this.regexPattern = "";
         this.references = [];
+        this.additionalInformation = "";
     }
     // --- END - (REGISTRY) Compact ID Resolution Services ---
 
