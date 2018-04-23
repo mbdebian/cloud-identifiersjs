@@ -305,11 +305,12 @@ var IdentifiersJS = (function () {
     };
 
     RegistryService.prototype.requestPrefixRegistration = function (callback, payload) {
-        // TODO
         var endpoint = this.getServiceApiBaseline();
+        // TODO
     };
 
     RegistryService.prototype.requestValidationName = function (callback, payload) {
+        var endpoint = this.getServiceApiBaseline() + "/validateRegisterPrefixName";
         // TODO
     };
 
