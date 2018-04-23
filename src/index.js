@@ -136,12 +136,13 @@ var IdentifiersJS = (function () {
     // --- (REGISTRY) Compact ID Resolution Services ---
     // Models
     function ServiceResponseRegisterPrefix() {
-        // TODO
+        ServerResponse.call(this);
+        this.payload = new ServiceResponseRegisterPrefixPayload();
     }
 
     function ServiceResponseValidateRequest() {
         ServerResponse.call(this);
-        this.payload = new ServiceRequestRegisterPrefixPayload();
+        this.payload = new ServiceResponseRegisterPrefixPayload();
     }
 
     function PrefixRequester(object) {
