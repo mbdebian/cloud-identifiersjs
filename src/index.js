@@ -130,7 +130,7 @@ var IdentifiersJS = (function () {
 
     ServerResponseResolve.prototype = Object.create(ServerResponse.prototype);
     ServerResponseResolve.prototype.constructor = ServerResponseResolve;
-
+    // --- END - (RESOLVER) Compact ID Resolution Services ---
 
 
 
