@@ -335,6 +335,7 @@ var IdentifiersJS = (function () {
     };
 
     RegistryService.prototype.requestValidationResourceAccessRule = function (callback, payload) {
+        var endpoint = this.getServiceApiBaseline() + "/";
         // TODO
     };
 
