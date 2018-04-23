@@ -315,7 +315,7 @@ var IdentifiersJS = (function () {
     };
 
     RegistryService.prototype.requestValidationDescription = function (callback, payload) {
-        var endpoint = this.getServiceApiBaseline() + "/";
+        var endpoint = this.getServiceApiBaseline() + "/validateRegisterPrefixDescription";
         // TODO
     };
 
