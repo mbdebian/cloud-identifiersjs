@@ -69,7 +69,7 @@ var IdentifiersJS = (function () {
         }
     };
 
-    // --- (Resolver) Compact ID Resolution Services ---
+    // --- (RESOLVER) Compact ID Resolution Services ---
     // Models
     function Recommendation(object) {
         // Defaults
