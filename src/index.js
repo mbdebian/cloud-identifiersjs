@@ -304,6 +304,9 @@ var IdentifiersJS = (function () {
         // TODO
     };
 
+    ResolverService.prototype.requestValidationName = function (callback, payload) {
+        // TODO
+    };
     // [___ (REGISTRY) Compact ID Resolution Services ___]
 
 
