@@ -139,6 +139,9 @@ var IdentifiersJS = (function () {
         // TODO
         this.name = "";
         this.email = "";
+        if (object) {
+            this.name = (object.name !== undefined) ? object.name : this.name;
+        }
     }
 
     function ServiceRequestRegisterPrefixPayload(object) {
