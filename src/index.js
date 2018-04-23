@@ -141,7 +141,7 @@ var IdentifiersJS = (function () {
         this.homePage = "";
         this.organization = "";
         this.preferredPrefix = "";
-        
+        this.resourceAccessRule = "";
     }
     // --- END - (REGISTRY) Compact ID Resolution Services ---
 
