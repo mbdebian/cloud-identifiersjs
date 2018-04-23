@@ -149,7 +149,7 @@ var IdentifiersJS = (function () {
         }
     }
 
-    function ServiceRequestRegisterPrefixPayload(object) {
+    function ServiceRequestRegisterPrefixPayload() {
         this.name = "";
         this.description = "";
         this.homePage = "";
@@ -161,19 +161,6 @@ var IdentifiersJS = (function () {
         this.references = [];
         this.additionalInformation = "";
         this.requester = new PrefixRequester();
-        if (object) {
-            this.name = (object.name !== undefined) ? object.name : this.name;
-            this.description = (object.description !== undefined) ? object.description : this.description;
-            this.homePage = (object.homePage !== undefined) ? object.homePage : this.homePage;
-            this.organization = (object.organization) !== undefined ? object.organization : this.organization;
-            this.preferredPrefix = (object.preferredPrefix !== undefined) ? object.preferredPrefix : this.preferredPrefix;
-            this.resourceAccessRule = (object.resourceAccessRule !== undefined) ? object.resourceAccessRule : this.resourceAccessRule;
-            this.exampleIdentifier = (object.exampleIdentifier !== undefined) ? object.exampleIdentifier : this.exampleIdentifier;
-            this.regexPattern = (object.regexPattern !== undefined) ? object.regexPattern : this.regexPattern;
-            this.references = (object.references !== undefined) ? object.references : this.references;
-            this.additionalInformation = (object.additionalInformation !== undefined) ? object.additionalInformation : this.additionalInformation;
-            this.requester = (object.requester !== undefined) ? new PrefixRequester(object.requester) : this.requester;
-        }
     }
     // --- END - (REGISTRY) Compact ID Resolution Services ---
 
