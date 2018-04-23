@@ -330,6 +330,7 @@ var IdentifiersJS = (function () {
     };
 
     RegistryService.prototype.requestValidationPreferredPrefix = function (callback, payload) {
+        var endpoint = this.getServiceApiBaseline() + "/";
         // TODO
     };
 
