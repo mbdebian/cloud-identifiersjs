@@ -164,6 +164,7 @@ var IdentifiersJS = (function () {
             this.preferredPrefix = (object.preferredPrefix !== undefined) ? object.preferredPrefix : this.preferredPrefix;
             this.resourceAccessRule = (object.resourceAccessRule !== undefined) ? object.resourceAccessRule : this.resourceAccessRule;
             this.exampleIdentifier = (object.exampleIdentifier !== undefined) ? object.exampleIdentifier : this.exampleIdentifier;
+            this.regexPattern = (object.regexPattern !== undefined) ? object.regexPattern : this.regexPattern;
         }
     }
     // --- END - (REGISTRY) Compact ID Resolution Services ---
