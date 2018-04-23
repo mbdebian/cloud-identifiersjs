@@ -304,6 +304,10 @@ var IdentifiersJS = (function () {
         return scheme + "://" + this.host + ":" + this.port;
     };
 
+    RegistryService.prototype.makePostRequest(callback, requestBody) {
+        // TODO
+    }
+
     RegistryService.prototype.requestPrefixRegistration = function (callback, payload) {
         var endpoint = this.getServiceApiBaseline();
         // TODO
