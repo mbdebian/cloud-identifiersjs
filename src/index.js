@@ -158,6 +158,7 @@ var IdentifiersJS = (function () {
         this.requester = PrefixRequester();
         if (object) {
             this.name = (object.name !== undefined) ? object.name : this.name;
+            this.description = (object.description !== undefined) ? object.description : this.description;
         }
     }
     // --- END - (REGISTRY) Compact ID Resolution Services ---
