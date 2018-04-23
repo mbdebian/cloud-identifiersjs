@@ -350,6 +350,7 @@ var IdentifiersJS = (function () {
     };
 
     RegistryService.prototype.requestValidationReferences = function (callback, payload) {
+        var endpoint = this.getServiceApiBaseline() + "/";
         // TODO
     };
 
