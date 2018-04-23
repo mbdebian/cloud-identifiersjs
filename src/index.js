@@ -136,6 +136,7 @@ var IdentifiersJS = (function () {
     // --- (REGISTRY) Compact ID Resolution Services ---
     // Models
     function ServiceResponseValidateRequest() {
+        ServerResponse.call(this);
         // TODO
     }
 
