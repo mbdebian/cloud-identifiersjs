@@ -360,6 +360,7 @@ var IdentifiersJS = (function () {
     };
 
     RegistryService.prototype.requestValidationRequester = function (callback, payload) {
+        var endpoint = this.getServiceApiBaseline() + "/";
         // TODO
     };
     // [___ (REGISTRY) Compact ID Resolution Services ___]
