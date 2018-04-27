@@ -413,7 +413,7 @@ var IdentifiersJS = (function () {
 
     function testInvalidRegistration() {
         console.log("==================================================================");
-        console.log("      ---> UNIT TEST --- Valid Registration Request --- <---");
+        console.log("     ---> UNIT TEST --- Invalid Registration Request --- <---");
         console.log("==================================================================");
         // TODO
     }
