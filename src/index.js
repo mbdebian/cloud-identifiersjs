@@ -454,6 +454,10 @@ var IdentifiersJS = (function () {
         }
         return new ResolverService(dstHost, dstPort);
     }
+
+    function factoryGetRegistry(host, port) {
+        // TODO
+    }
     // --- END - API Services Factory ---
 
     return {
