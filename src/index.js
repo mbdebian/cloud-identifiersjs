@@ -441,6 +441,7 @@ var IdentifiersJS = (function () {
         payload.requester.name = "Manuel Bernal Llinares";
         payload.requester.email = "mbernal@ebi.ac.uk";
         var service = factoryGetRegistry();
+        service.requestPrefixRegistration(printRegistryResponse('Prefix Registration', payload), payload);
         // TODO
     }
 
