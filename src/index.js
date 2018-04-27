@@ -46,7 +46,19 @@ var IdentifiersJS = (function () {
     }
 
     function postAjax(url, body, success, error) {
-        // TODO
+        var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+        xhr.open('POST', url);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState > 3 && xhr.status == 200) {
+                success(xhr);
+            } else if (xhr.readyState > 3 && xhr.status != 200) {
+                error(xhr);
+            }
+        };
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify(body));
+        return xhr;
     }
     // --- END - Helpers
 
