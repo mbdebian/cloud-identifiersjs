@@ -404,7 +404,7 @@ var IdentifiersJS = (function () {
 
     RegistryService.prototype.requestValidationRegexPattern = function (callback, payload) {
         var endpoint = this.getServiceApiBaseline() + "/validateRegisterPrefixRegexPattern";
-        // TODO
+        this.makeValidationRequest(callback, endpoint, payload);
     };
 
     RegistryService.prototype.requestValidationReferences = function (callback, payload) {
