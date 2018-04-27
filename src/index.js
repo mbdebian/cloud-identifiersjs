@@ -25,7 +25,7 @@ var IdentifiersJS = (function () {
     // Scheme
     var scheme = 'http';
 
-    // Resolver Service
+    // Resolver Service (Defaults)
     var wsResolverHost = 'resolver';
     var wsResolverPort = '8080';
 
