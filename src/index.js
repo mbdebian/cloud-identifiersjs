@@ -460,7 +460,15 @@ var IdentifiersJS = (function () {
     }
 
     function factoryGetRegistry(host, port) {
-        // TODO
+        var dstHost = wsRegistryHost;
+        var dstPort = wsRegistryPort;
+        if (typeof host !== "undefined") {
+            dstHost = host;
+            if (typeof port !== "undefined") {
+                dstPort = port;
+            }
+        }
+        return new RegistryService(host, port);
     }
     // --- END - API Services Factory ---
 
