@@ -348,7 +348,7 @@ var IdentifiersJS = (function () {
         var requestBody = new ServiceRequestRegisterPrefix();
         requestBody.payload = payload;
         // Default response
-        var registrationResponse = ServiceResponseRegisterPrefix();
+        var registrationResponse = new ServiceResponseRegisterPrefix();
         this.makePostRequest(callback, endpoint, requestBody, registrationResponse);
     };
 
