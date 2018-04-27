@@ -331,7 +331,8 @@ var IdentifiersJS = (function () {
             }
             callback(defaultResponse);
         };
-        // TODO - Post request
+        // POST the request
+        postAjax(endpoint, request, processResponse, processResponse);
     };
 
     RegistryService.prototype.makeValidationRequest = function (callback, endpoint) {
