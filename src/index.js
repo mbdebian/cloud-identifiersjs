@@ -341,10 +341,11 @@ var IdentifiersJS = (function () {
 
     RegistryService.prototype.requestPrefixRegistration = function (callback, payload) {
         var endpoint = this.getServiceApiBaseline();
+        var requestBody = new ServiceRequestRegisterPrefix();
+        requestBody.payload = payload;
         // Default response
         var registrationResponse = ServiceResponseRegisterPrefix();
         this.makePostRequest(callback, endpoint, requestBody, registrationResponse);
-        // TODO
     };
 
     RegistryService.prototype.requestValidationName = function (callback, payload) {
