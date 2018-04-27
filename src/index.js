@@ -45,6 +45,11 @@ var IdentifiersJS = (function () {
         return xhr;
     }
 
+    function postAjax(url, body, success, error) {
+        // TODO
+    }
+    // --- END - Helpers
+
     // Server Request
     function ServerRequest() {
         this.apiVersion = apiVersion;
@@ -391,6 +396,10 @@ var IdentifiersJS = (function () {
     }
 
     function testValidValidation() {
+        // TODO
+    }
+
+    function testInvalidValidation() {
         // TODO
     }
     // [___ (REGISTRY) Compact ID Resolution Services ___]
