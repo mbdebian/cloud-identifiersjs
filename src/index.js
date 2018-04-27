@@ -408,6 +408,20 @@ var IdentifiersJS = (function () {
     };
 
     // --- Unit Testing ---
+    function printRegistryResponse(requestType, payload) {
+        return function (response) {
+            console.log("==================================================================");
+            console.log("---> " + requestType + " to Registry Service, with payload --- " + JSON.stringify(payload));
+            console.log("\tResponse API Version " + response.apiVersion);
+            console.log("\tHTTP Status " + response.httpStatus);
+            console.log("\tError Message " + response.errorMessage);
+            if (response.payload) {
+                console.log("\tResponse Payload contains comment '" + response.payload.comment + "'");
+            }
+            console.log("==================================================================");
+        };
+    }
+
     function testValidRegistration() {
         console.log("==================================================================");
         console.log("      ---> UNIT TEST --- Valid Registration Request --- <---");
