@@ -459,7 +459,22 @@ var IdentifiersJS = (function () {
         console.log("==================================================================");
         console.log("     ---> UNIT TEST --- Invalid Registration Request --- <---");
         console.log("==================================================================");
-        // TODO
+        var payload = new ServiceRequestRegisterPrefixPayload();
+        payload.name = "Unit Test name";
+        payload.description = "This is a sample prefix registration request from a unit test of libapi, we need enough characters for the description";
+        payload.homePage = "http://identifiers.org";
+        //payload.organization = "EMBL-EBI";
+        payload.preferredPrefix = "myprefix";
+        payload.resourceAccessRule = "http://httpstat.us/{$id}";
+        payload.exampleIdentifier = "404";
+        payload.regexPattern = "\\d+";
+        payload.references = ["ref1", "ref2"];
+        payload.additionalInformation = "Additional information about this unit test";
+        payload.requester = new PrefixRequester();
+        payload.requester.name = "Manuel Bernal Llinares";
+        payload.requester.email = "mbernal@ebi.ac.uk";
+        var service = factoryGetRegistry();
+        service.requestPrefixRegistration(printRegistryResponse('Prefix Registration', payload), payload);
     }
 
     function testValidValidation() {
