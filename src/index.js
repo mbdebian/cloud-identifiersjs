@@ -405,6 +405,9 @@ var IdentifiersJS = (function () {
 
     // --- Unit Testing ---
     function testValidRegistration() {
+        console.log("==================================================================");
+        console.log("      ---> UNIT TEST --- Valid Registration Request --- <---");
+        console.log("==================================================================");
         // TODO
     }
 
