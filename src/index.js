@@ -399,7 +399,7 @@ var IdentifiersJS = (function () {
 
     RegistryService.prototype.requestValidationExampleIdentifier = function (callback, payload) {
         var endpoint = this.getServiceApiBaseline() + "/validateRegisterPrefixExampleIdentifier";
-        // TODO
+        this.makeValidationRequest(callback, endpoint, payload);
     };
 
     RegistryService.prototype.requestValidationRegexPattern = function (callback, payload) {
