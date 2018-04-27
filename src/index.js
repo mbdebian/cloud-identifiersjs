@@ -26,7 +26,7 @@ var IdentifiersJS = (function () {
     var scheme = 'http';
 
     // Resolver Service (Defaults)
-    var wsResolverHost = 'resolver';
+    var wsResolverHost = 'localhost';
     var wsResolverPort = '8080';
 
     // Registry service (Defaults)
