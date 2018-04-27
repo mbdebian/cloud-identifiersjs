@@ -517,7 +517,18 @@ var IdentifiersJS = (function () {
         console.log("==================================================================");
         console.log("     ---> UNIT TEST --- Invalid Validation Request --- <---");
         console.log("==================================================================");
-        // TODO
+        var service = factoryGetRegistry();
+        var payload = new ServiceRequestRegisterPrefixPayload();
+        // It doesn't need to be exhaustive
+        payload.description = "we need enough characters for the description";
+        service.requestValidationDescription(printRegistryServiceResponse('[Validation Request] - Description --- ', payload), payload);
+        payload.preferredPrefix = "chebi";
+        service.requestValidationPreferredPrefix(printRegistryServiceResponse('[Validation Request] - Preferred Prefix --- ', payload), payload);
+        payload.resourceAccessRule = "http://httpstat.us/{$this_is_not_valid}";
+        service.requestValidationResourceAccessRule(printRegistryServiceResponse('[Validation Request] - Access Rule --- ', payload), payload);
+        payload.requester = new PrefixRequester();
+        payload.requester.name = "Manuel Bernal Llinares";
+        service.requestValidationRequester(printRegistryServiceResponse('[Validation Request] - Requester --- ', payload), payload);
     }
 
     function unitTestRegistry() {
