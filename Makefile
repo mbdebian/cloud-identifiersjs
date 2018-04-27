@@ -65,4 +65,13 @@ clean:
 	@echo "<===|DEVOPS|===> [CLEAN] Cleaning the space"
 	@rm -rf ${folder_dist}
 
-.PHONY: all clean build_lib distribution deploy release sync_project_version set_next_development_version
+	# Folders
+tmp:
+	@echo "<===|DEVOPS|===> [FOLDER] Creating temporary folders"
+	@mkdir -p tmp/fakesmtp
+
+clean_tmp:
+	@echo "<===|DEVOPS|===> [HOUSEKEEPING] Cleaning temporary folders"
+	@rm -rf tmp
+
+.PHONY: all clean clean_tmp build_lib distribution deploy release sync_project_version set_next_development_version
