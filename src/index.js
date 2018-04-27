@@ -457,6 +457,7 @@ var IdentifiersJS = (function () {
 
     return {
         getResolver: factoryGetResolver,
-        unitTestResolver: testResolve
+        unitTestResolver: testResolve,
+        unitTestRegistry: unitTestRegistry()
     };
 })();
