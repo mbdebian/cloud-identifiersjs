@@ -188,7 +188,7 @@ var IdentifiersJS = (function () {
     ServiceResponseValidateRequest.prototype = Object.create(ServerResponse.prototype);
     ServiceResponseValidateRequest.prototype.constructor = ServiceResponseValidateRequest;
 
-    
+
     function ServiceResponseRegisterPrefixPayload() {
         this.comment = "";
     }
@@ -453,7 +453,6 @@ var IdentifiersJS = (function () {
         payload.requester.email = "mbernal@ebi.ac.uk";
         var service = factoryGetRegistry();
         service.requestPrefixRegistration(printRegistryResponse('Prefix Registration', payload), payload);
-        // TODO
     }
 
     function testInvalidRegistration() {
