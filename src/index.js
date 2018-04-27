@@ -409,7 +409,7 @@ var IdentifiersJS = (function () {
 
     RegistryService.prototype.requestValidationReferences = function (callback, payload) {
         var endpoint = this.getServiceApiBaseline() + "/validateRegisterPrefixReferences";
-        // TODO
+        this.makeValidationRequest(callback, endpoint, payload);
     };
 
     RegistryService.prototype.requestValidationAdditionalInformation = function (callback, payload) {
