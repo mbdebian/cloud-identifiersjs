@@ -454,10 +454,11 @@ var IdentifiersJS = (function () {
         }
         return new ResolverService(dstHost, dstPort);
     }
+    // --- END - API Services Factory ---
 
     return {
         getResolver: factoryGetResolver,
         unitTestResolver: testResolve,
-        unitTestRegistry: unitTestRegistry()
+        unitTestRegistry: unitTestRegistry
     };
 })();
