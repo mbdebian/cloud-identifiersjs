@@ -321,7 +321,7 @@ var IdentifiersJS = (function () {
         return scheme + "://" + this.host + ":" + this.port;
     };
 
-    RegistryService.prototype.makePostRequest = function(callback, endpoint, request, defaultResponse) {
+    RegistryService.prototype.makePostRequest = function(callback, endpoint, requestBody, defaultResponse) {
         var processResponse = function (xhr) {
             console.debug("Registry Service Response, HTTP Status " + xhr.status + " - Response text: " + xhr.responseText);
             defaultResponse.httpStatus = xhr.status;
@@ -332,7 +332,7 @@ var IdentifiersJS = (function () {
             callback(defaultResponse);
         };
         // POST the request
-        postAjax(endpoint, request, processResponse, processResponse);
+        postAjax(endpoint, requestBody, processResponse, processResponse);
     };
 
     RegistryService.prototype.makeValidationRequest = function (callback, endpoint) {
