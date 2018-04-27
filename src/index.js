@@ -382,7 +382,9 @@ var IdentifiersJS = (function () {
     };
 
     // --- Unit Testing ---
-    
+    function testValidRegistration() {
+        // TODO
+    }
     // [___ (REGISTRY) Compact ID Resolution Services ___]
 
 
