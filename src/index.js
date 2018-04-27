@@ -423,7 +423,7 @@ var IdentifiersJS = (function () {
     };
 
     // --- Unit Testing ---
-    function printRegistryResponse(requestType, payload) {
+    function printRegistryServiceResponse(requestType, payload) {
         return function (response) {
             console.log("==================================================================");
             console.log("---> " + requestType + " to Registry Service, with payload --- " + JSON.stringify(payload));
@@ -456,7 +456,7 @@ var IdentifiersJS = (function () {
         payload.requester.name = "Manuel Bernal Llinares";
         payload.requester.email = "mbernal@ebi.ac.uk";
         var service = factoryGetRegistry();
-        service.requestPrefixRegistration(printRegistryResponse('Prefix Registration', payload), payload);
+        service.requestPrefixRegistration(printRegistryServiceResponse('Prefix Registration', payload), payload);
     }
 
     function testInvalidRegistration() {
@@ -478,7 +478,7 @@ var IdentifiersJS = (function () {
         payload.requester.name = "Manuel Bernal Llinares";
         payload.requester.email = "mbernal@ebi.ac.uk";
         var service = factoryGetRegistry();
-        service.requestPrefixRegistration(printRegistryResponse('Prefix Registration', payload), payload);
+        service.requestPrefixRegistration(printRegistryServiceResponse('Prefix Registration', payload), payload);
     }
 
     function testValidValidation() {
