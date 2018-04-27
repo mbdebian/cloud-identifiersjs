@@ -488,30 +488,29 @@ var IdentifiersJS = (function () {
         var service = factoryGetRegistry();
         var payload = new ServiceRequestRegisterPrefixPayload();
         payload.name = "Unit Test name";
-        service.requestValidationName(printRegistryServiceResponse('Validation Request - Name', payload), payload);
+        service.requestValidationName(printRegistryServiceResponse('[Validation Request] - Name --- ', payload), payload);
         payload.description = "This is a sample prefix registration request from a unit test of libapi, we need enough characters for the description";
-
+        service.requestValidationDescription(printRegistryServiceResponse('[Validation Request] - Description --- ', payload), payload);
         payload.homePage = "http://identifiers.org";
-
+        service.requestValidationHomePage(printRegistryServiceResponse('[Validation Request] - Home Page --- ', payload), payload);
         payload.organization = "EMBL-EBI";
-
+        service.requestValidationOrganization(printRegistryServiceResponse('[Validation Request] - Organization --- ', payload), payload);
         payload.preferredPrefix = "myprefix";
-
+        service.requestValidationPreferredPrefix(printRegistryServiceResponse('[Validation Request] - Preferred Prefix --- ', payload), payload);
         payload.resourceAccessRule = "http://httpstat.us/{$id}";
-
+        service.requestValidationResourceAccessRule(printRegistryServiceResponse('[Validation Request] - Access Rule --- ', payload), payload);
         payload.exampleIdentifier = "200";
-
+        service.requestValidationExampleIdentifier(printRegistryServiceResponse('[Validation Request] - Example Identifier --- ', payload), payload);
         payload.regexPattern = "\\d+";
-
+        service.requestValidationRegexPattern(printRegistryServiceResponse('[Validation Request] - Regex Pattern --- ', payload), payload);
         payload.references = ["ref1", "ref2"];
-
+        service.requestValidationReferences(printRegistryServiceResponse('[Validation Request] - References --- ', payload), payload);
         payload.additionalInformation = "Additional information about this unit test";
-
+        service.requestValidationAdditionalInformation(printRegistryServiceResponse('[Validation Request] - Additional Information --- ', payload), payload);
         payload.requester = new PrefixRequester();
-
         payload.requester.name = "Manuel Bernal Llinares";
-
         payload.requester.email = "mbernal@ebi.ac.uk";
+        service.requestValidationRequester(printRegistryServiceResponse('[Validation Request] - Requester --- ', payload), payload);
     }
 
     function testInvalidValidation() {
