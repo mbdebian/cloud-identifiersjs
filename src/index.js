@@ -380,6 +380,9 @@ var IdentifiersJS = (function () {
         var endpoint = this.getServiceApiBaseline() + "/";
         // TODO
     };
+
+    // --- Unit Testing ---
+    
     // [___ (REGISTRY) Compact ID Resolution Services ___]
 
 
