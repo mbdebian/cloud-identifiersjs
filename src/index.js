@@ -419,6 +419,14 @@ var IdentifiersJS = (function () {
     function testInvalidValidation() {
         // TODO
     }
+
+    function unitTestRegistry() {
+        // NOTE - I know it is not testing everything...
+        testValidRegistration();
+        testInvalidRegistration();
+        testValidValidation();
+        testInvalidValidation();
+    }
     // [___ (REGISTRY) Compact ID Resolution Services ___]
 
 
