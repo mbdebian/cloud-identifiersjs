@@ -426,6 +426,9 @@ var IdentifiersJS = (function () {
     }
 
     function testInvalidValidation() {
+        console.log("==================================================================");
+        console.log("     ---> UNIT TEST --- Invalid Validation Request --- <---");
+        console.log("==================================================================");
         // TODO
     }
 
