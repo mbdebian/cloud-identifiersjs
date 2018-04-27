@@ -419,7 +419,7 @@ var IdentifiersJS = (function () {
 
     RegistryService.prototype.requestValidationRequester = function (callback, payload) {
         var endpoint = this.getServiceApiBaseline() + "/";
-        // TODO
+        this.makeValidationRequest(callback, endpoint, payload);
     };
 
     // --- Unit Testing ---
