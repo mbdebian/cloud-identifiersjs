@@ -148,7 +148,6 @@ var IdentifiersJS = (function () {
         ServerResponse.call(this);
         this.payload = new ResponseResolvePayload();
     }
-
     ServerResponseResolve.prototype = Object.create(ServerResponse.prototype);
     ServerResponseResolve.prototype.constructor = ServerResponseResolve;
     // --- END - (RESOLVER) Compact ID Resolution Services ---
@@ -161,23 +160,35 @@ var IdentifiersJS = (function () {
         // Default payload
         this.payload = new ServiceRequestRegisterPrefixPayload();
     }
+    ServiceRequestValidate.prototype = Object.create(ServerRequest.prototype);
+    ServiceRequestValidate.prototype.constructor = ServiceRequestValidate;
+
 
     function ServiceRequestRegisterPrefix() {
         ServerRequest.call(this);
         // Default payload
         this.payload = new ServiceRequestRegisterPrefixPayload();
     }
+    ServiceRequestRegisterPrefix.prototype = Object.create(ServerRequest.prototype);
+    ServiceRequestRegisterPrefix.prototype.constructor = ServiceRequestRegisterPrefix;
+
 
     function ServiceResponseRegisterPrefix() {
         ServerResponse.call(this);
         this.payload = new ServiceResponseRegisterPrefixPayload();
     }
+    ServiceResponseRegisterPrefix.prototype = Object.create(ServerResponse.prototype);
+    ServiceResponseRegisterPrefix.prototype.constructor = ServiceResponseRegisterPrefix;
+
 
     function ServiceResponseValidateRequest() {
         ServerResponse.call(this);
         this.payload = new ServiceResponseRegisterPrefixPayload();
     }
+    ServiceResponseValidateRequest.prototype = Object.create(ServerResponse.prototype);
+    ServiceResponseValidateRequest.prototype.constructor = ServiceResponseValidateRequest;
 
+    
     function ServiceResponseRegisterPrefixPayload() {
         this.comment = "";
     }
