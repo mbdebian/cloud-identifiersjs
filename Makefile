@@ -30,7 +30,7 @@ deploy: clean distribution
 	@#aws s3 rm ${s3_target} --recursive
 	@aws s3 cp dist ${s3_target} --recursive
 
-development_env_up:
+development_env_up: tmp
 	@echo "<===|DEVOPS|===> [ENVIRONMENT] Bringing development environment UP"
 	@docker-compose -f $(docker_compose_development_file) up -d
 	@# TODO Clean this way of referencing the target name in future iterations
