@@ -418,7 +418,7 @@ var IdentifiersJS = (function () {
     };
 
     RegistryService.prototype.requestValidationRequester = function (callback, payload) {
-        var endpoint = this.getServiceApiBaseline() + "/";
+        var endpoint = this.getServiceApiBaseline() + "/validateRegisterPrefixRequester";
         this.makeValidationRequest(callback, endpoint, payload);
     };
 
