@@ -29,6 +29,10 @@ var IdentifiersJS = (function () {
     var wsResolverHost = 'resolver';
     var wsResolverPort = '8080';
 
+    // Registry service (Defaults)
+    var wsRegistryHost = 'localhost';
+    var wsRegistryPort = '8081';
+
     // Helpers
     function getAjax(url, success, error) {
         var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
