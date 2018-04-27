@@ -497,7 +497,7 @@ var IdentifiersJS = (function () {
                 dstPort = port;
             }
         }
-        return new RegistryService(host, port);
+        return new RegistryService(dstHost, dstPort);
     }
     // --- END - API Services Factory ---
 
