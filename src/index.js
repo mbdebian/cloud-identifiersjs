@@ -474,6 +474,7 @@ var IdentifiersJS = (function () {
 
     return {
         getResolver: factoryGetResolver,
+        getRegistry: factoryGetRegistry,
         unitTestResolver: testResolve,
         unitTestRegistry: unitTestRegistry
     };
