@@ -335,7 +335,7 @@ var IdentifiersJS = (function () {
         postAjax(endpoint, requestBody, processResponse, processResponse);
     };
 
-    RegistryService.prototype.makeValidationRequest = function (callback, endpoint) {
+    RegistryService.prototype.makeValidationRequest = function (callback, endpoint, payload) {
         // TODO
     };
 
