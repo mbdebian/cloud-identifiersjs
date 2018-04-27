@@ -419,6 +419,9 @@ var IdentifiersJS = (function () {
     }
 
     function testValidValidation() {
+        console.log("==================================================================");
+        console.log("      ---> UNIT TEST --- Valid Validation Request --- <---");
+        console.log("==================================================================");
         // TODO
     }
 
