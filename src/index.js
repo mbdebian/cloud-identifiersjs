@@ -379,7 +379,7 @@ var IdentifiersJS = (function () {
 
     RegistryService.prototype.requestValidationHomePage = function (callback, payload) {
         var endpoint = this.getServiceApiBaseline() + "/validateRegisterPrefixHomePage";
-        // TODO
+        this.makeValidationRequest(callback, endpoint, payload);
     };
 
     RegistryService.prototype.requestValidationOrganization = function (callback, payload) {
