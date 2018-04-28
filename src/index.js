@@ -568,6 +568,7 @@ var IdentifiersJS = (function () {
     // --- END - API Services Factory ---
 
     return {
+        PrefixRegistrationPayload: ServiceRequestRegisterPrefixPayload,
         getResolver: factoryGetResolver,
         getRegistry: factoryGetRegistry,
         unitTestResolver: testResolve,
